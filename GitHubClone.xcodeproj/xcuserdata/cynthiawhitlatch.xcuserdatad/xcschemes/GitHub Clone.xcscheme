@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3DE097171BF111BA0066BDDF"
-               BuildableName = "GitHub Clone.app"
-               BlueprintName = "GitHub Clone"
-               ReferencedContainer = "container:GitHub Clone.xcodeproj">
+               BuildableName = "GitHubClone.app"
+               BlueprintName = "GitHubClone"
+               ReferencedContainer = "container:GitHubClone.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3DE0972B1BF111BA0066BDDF"
-               BuildableName = "GitHub CloneTests.xctest"
-               BlueprintName = "GitHub CloneTests"
-               ReferencedContainer = "container:GitHub Clone.xcodeproj">
+               BuildableName = "GitHubClone.xctest"
+               BlueprintName = "GitHubCloneTests"
+               ReferencedContainer = "container:GitHubClone.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3DE097361BF111BA0066BDDF"
-               BuildableName = "GitHub CloneUITests.xctest"
-               BlueprintName = "GitHub CloneUITests"
-               ReferencedContainer = "container:GitHub Clone.xcodeproj">
+               BuildableName = "GitHubClone.xctest"
+               BlueprintName = "GitHubCloneUITests"
+               ReferencedContainer = "container:GitHubClone.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3DE097171BF111BA0066BDDF"
-            BuildableName = "GitHub Clone.app"
-            BlueprintName = "GitHub Clone"
-            ReferencedContainer = "container:GitHub Clone.xcodeproj">
+            BuildableName = "GitHubClone.app"
+            BlueprintName = "GitHubClone"
+            ReferencedContainer = "container:GitHubClone.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3DE097171BF111BA0066BDDF"
-            BuildableName = "GitHub Clone.app"
-            BlueprintName = "GitHub Clone"
-            ReferencedContainer = "container:GitHub Clone.xcodeproj">
+            BuildableName = "GitHubClone.app"
+            BlueprintName = "GitHubClone"
+            ReferencedContainer = "container:GitHubClone.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3DE097171BF111BA0066BDDF"
-            BuildableName = "GitHub Clone.app"
-            BlueprintName = "GitHub Clone"
-            ReferencedContainer = "container:GitHub Clone.xcodeproj">
+            BuildableName = "GitHubClone.app"
+            BlueprintName = "GitHubClone"
+            ReferencedContainer = "container:GitHubClone.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
