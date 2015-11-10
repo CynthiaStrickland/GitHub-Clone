@@ -27,8 +27,7 @@ class KeychainService {
                     //Create our keychain query with values to save as its objects
         let keychainQuery: NSMutableDictionary = NSMutableDictionary(objects: [dataFromString], forKeys: [kSecValueDataValue])
         
-                    //    print("Keychain Query: \(keychainQuery)")
-                    //    print("")
+
         
                     // Delete any old item stored before our newone
         SecItemDelete(keychainQuery)

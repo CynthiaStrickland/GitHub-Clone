@@ -53,8 +53,7 @@ class OAuth {
                                 guard let token = rootObject["access_token"] as? String else {return}
                                 
                                 NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
-//                                    NSUserDefaults.standardUserDefaults().setObject(token, forKey: kTokenKey)
-//                                    NSUserDefaults.standardUserDefaults().synchronize()
+
                                     KeychainService.save(token)
                                 })
                             }
@@ -75,4 +74,5 @@ class OAuth {
     }
 }
 
-
+//                                    NSUserDefaults.standardUserDefaults().setObject(token, forKey: kTokenKey)
+//                                    NSUserDefaults.standardUserDefaults().synchronize()

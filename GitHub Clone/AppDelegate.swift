@@ -18,6 +18,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        let token = KeychainService.LoadFromKeychain()
+        
+        if token.objectForKey(kSecValueDataValue) == nil {
+            if let loginController = self.storyboard?.instantiateViewControllerWithIdentifier("LoginViewController") as? LoginViewController {
+                
+                self.navigationController?.presentViewController(loginController, animated: true, completion: nil)
+            }
+        }
+
+        
+        //check for token
+        //     no token present login
+        //else do nothing
         // Override point for customization after application launch.
         return true
     }
