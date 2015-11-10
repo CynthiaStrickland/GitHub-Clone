@@ -18,6 +18,8 @@
 		3DE0974C1BF13A8F0066BDDF /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE0974B1BF13A8F0066BDDF /* Repo.swift */; };
 		3DE0974E1BF14E5C0066BDDF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE0974D1BF14E5C0066BDDF /* Security.framework */; };
 		3DE097501BF26F520066BDDF /* KeyChainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE0974F1BF26F520066BDDF /* KeyChainService.swift */; };
+		3DE097521BF2959C0066BDDF /* github.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DE097511BF2959C0066BDDF /* github.png */; };
+		3DE097541BF29B120066BDDF /* LoginViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE097531BF29B120066BDDF /* LoginViewcontroller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		3DE0974B1BF13A8F0066BDDF /* Repo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		3DE0974D1BF14E5C0066BDDF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		3DE0974F1BF26F520066BDDF /* KeyChainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainService.swift; sourceTree = "<group>"; };
+		3DE097511BF2959C0066BDDF /* github.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = github.png; sourceTree = "<group>"; };
+		3DE097531BF29B120066BDDF /* LoginViewcontroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewcontroller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,14 +112,16 @@
 			isa = PBXGroup;
 			children = (
 				3DE0971F1BF111BA0066BDDF /* Main.storyboard */,
-				3DE0974F1BF26F520066BDDF /* KeyChainService.swift */,
 				3DE0971B1BF111BA0066BDDF /* AppDelegate.swift */,
+				3DE097531BF29B120066BDDF /* LoginViewcontroller.swift */,
 				3DE0971D1BF111BA0066BDDF /* ViewController.swift */,
 				3DE097491BF1283A0066BDDF /* OAuthClient.swift */,
+				3DE0974F1BF26F520066BDDF /* KeyChainService.swift */,
 				3DE0974B1BF13A8F0066BDDF /* Repo.swift */,
 				3DE097221BF111BA0066BDDF /* Assets.xcassets */,
 				3DE097241BF111BA0066BDDF /* LaunchScreen.storyboard */,
 				3DE097271BF111BA0066BDDF /* Info.plist */,
+				3DE097511BF2959C0066BDDF /* github.png */,
 			);
 			path = "GitHub Clone";
 			sourceTree = "<group>";
@@ -242,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DE097521BF2959C0066BDDF /* github.png in Resources */,
 				3DE097261BF111BA0066BDDF /* LaunchScreen.storyboard in Resources */,
 				3DE097231BF111BA0066BDDF /* Assets.xcassets in Resources */,
 				3DE097211BF111BA0066BDDF /* Main.storyboard in Resources */,
@@ -269,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DE097541BF29B120066BDDF /* LoginViewcontroller.swift in Sources */,
 				3DE097501BF26F520066BDDF /* KeyChainService.swift in Sources */,
 				3DE0971E1BF111BA0066BDDF /* ViewController.swift in Sources */,
 				3DE0971C1BF111BA0066BDDF /* AppDelegate.swift in Sources */,
