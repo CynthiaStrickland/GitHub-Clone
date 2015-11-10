@@ -18,6 +18,9 @@ class OAuth {
 
     static let shared = OAuth()
 
+    
+            ///Getting TOKEN
+    
     func requestGithubAccess() {
         let authURL = NSURL(string: "https://github.com/login/oauth/authorize?client_id=\(kClientId)&scope=user,repo")
         UIApplication.sharedApplication().openURL(authURL!)
