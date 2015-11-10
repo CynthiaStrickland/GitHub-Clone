@@ -16,11 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, handleOpenURL url: NSURL) -> Bool {
         return true
     }
-
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         return true
     }
+    
+    //Once User has granted access, Github will send back URL with token using URI Scheme.  To Accept this add function to AppDelegate
+    //This function is called everytime our app is opened from a URL.
     
     func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
         OAuth.shared.exchangeCodeInURL(url)

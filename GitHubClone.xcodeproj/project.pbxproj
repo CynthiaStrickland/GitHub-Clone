@@ -17,6 +17,7 @@
 		3DE0974A1BF1283A0066BDDF /* OAuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE097491BF1283A0066BDDF /* OAuthClient.swift */; };
 		3DE0974C1BF13A8F0066BDDF /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE0974B1BF13A8F0066BDDF /* Repo.swift */; };
 		3DE0974E1BF14E5C0066BDDF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE0974D1BF14E5C0066BDDF /* Security.framework */; };
+		3DE097501BF26F520066BDDF /* KeyChainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE0974F1BF26F520066BDDF /* KeyChainService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		3DE097491BF1283A0066BDDF /* OAuthClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthClient.swift; sourceTree = "<group>"; };
 		3DE0974B1BF13A8F0066BDDF /* Repo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		3DE0974D1BF14E5C0066BDDF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		3DE0974F1BF26F520066BDDF /* KeyChainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				3DE0971F1BF111BA0066BDDF /* Main.storyboard */,
+				3DE0974F1BF26F520066BDDF /* KeyChainService.swift */,
 				3DE0971B1BF111BA0066BDDF /* AppDelegate.swift */,
 				3DE0971D1BF111BA0066BDDF /* ViewController.swift */,
 				3DE097491BF1283A0066BDDF /* OAuthClient.swift */,
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DE097501BF26F520066BDDF /* KeyChainService.swift in Sources */,
 				3DE0971E1BF111BA0066BDDF /* ViewController.swift in Sources */,
 				3DE0971C1BF111BA0066BDDF /* AppDelegate.swift in Sources */,
 				3DE0974A1BF1283A0066BDDF /* OAuthClient.swift in Sources */,
