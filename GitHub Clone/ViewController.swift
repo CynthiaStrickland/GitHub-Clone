@@ -11,35 +11,13 @@ import Security
 
 class ViewController: UIViewController {
     
-    
-    
-    
-    @IBAction func requestTokenButton(sender: AnyObject) {
-        
-        OAuth.shared.requestGithubAccess()
-        
-    }
-    
-    
-    @IBAction func printTokenButton(sender: AnyObject) {
-    
-        print(OAuth.shared.token())
-    }
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
-        
-        
-        
-        
     }
-
-
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
 
 }
 
