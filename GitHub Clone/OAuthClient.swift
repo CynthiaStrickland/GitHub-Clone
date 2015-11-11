@@ -31,7 +31,7 @@ class OAuth {
     
         //  REQUEST TOKEN --> ACCESS TOKEN
     
-    func exchangeCodeInURL(codeURL : NSURL) {
+    func exchangeCodeInURL(codeURL : NSURL, completion: () -> ()) {
         if let code = codeURL.query {
                 //Only one item in query in the url is the Request Token.  You can get it by calling .query on the url.
             
@@ -55,11 +55,11 @@ class OAuth {
                                 NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
 
                                     KeychainService.save(token)
+                                    completion()
+                                    
                                 })
                             }
-                            
-                            print("rootObject")
-                            
+                                                        
                         } catch let error as NSError {
                             print(error)
                         }
@@ -70,9 +70,8 @@ class OAuth {
     }
             //Save the Token to NSUserDefaults and return it
     func token() -> String? {
-        guard let token = NSUserDefaults.standardUserDefaults().stringForKey(kTokenKey) else {return nil}
-        
-        return token
+        guard let token = KeychainService.loadFromKeychain() else {return nil}
+        return token as String
     }
 }
 

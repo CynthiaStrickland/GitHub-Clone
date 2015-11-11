@@ -39,7 +39,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pxk-T6-4W7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-90" y="-533"/>
+            <point key="canvasLocation" x="-211" y="-533"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -57,13 +57,21 @@
                                 <rect key="frame" x="0.0" y="103" width="600" height="497"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="lnD-Rq-Jjw">
+                                <rect key="frame" x="0.0" y="59" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="MBb-CY-Jip" secondAttribute="trailing" id="31L-Hd-TfW"/>
                             <constraint firstItem="MBb-CY-Jip" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6kj-eZ-fi9"/>
                             <constraint firstItem="MBb-CY-Jip" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="83" id="7NS-KG-Ol5"/>
+                            <constraint firstItem="lnD-Rq-Jjw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LGl-5c-LGI"/>
+                            <constraint firstItem="lnD-Rq-Jjw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="39" id="LMn-3S-oZH"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MBb-CY-Jip" secondAttribute="bottom" id="QU8-ED-F0D"/>
+                            <constraint firstAttribute="trailing" secondItem="lnD-Rq-Jjw" secondAttribute="trailing" id="RqQ-uw-sSD"/>
+                            <constraint firstItem="MBb-CY-Jip" firstAttribute="top" secondItem="lnD-Rq-Jjw" secondAttribute="bottom" id="rSl-cy-WLe"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rsH-ZP-25k">
@@ -72,7 +80,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableView" destination="MBb-CY-Jip" id="yoC-5z-xtI"/>
+                        <outlet property="tableView" destination="MBb-CY-Jip" id="g9B-Nr-2kk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

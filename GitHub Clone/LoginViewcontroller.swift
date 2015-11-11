@@ -9,9 +9,12 @@
 import UIKit
 import Security
 
+typealias LoginViewcontrollerCompletion = () -> ()
 
 class LoginViewcontroller: UIViewController {
 
+    var completion: LoginViewcontrollerCompletion?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

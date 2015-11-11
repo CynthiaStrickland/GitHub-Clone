@@ -1,63 +1,54 @@
-//
-//  KeyChainService.swift
-//  GitHubClone
-//
-//  Created by Cynthia Whitlatch on 11/10/15.
-//  Copyright © 2015 Cynthia Whitlatch. All rights reserved.
-//
-
 import UIKit
 import Security
 
-    // Arguments for the keychain queries
+// Identifiers
+let userAccount = "github"
+let accessGroup = "MyService"
+
+// Arguments for the keychain queries
 let kSecClassValue = kSecClass as NSString
+let kSecAttrAccountValue = kSecAttrAccount as NSString
 let kSecValueDataValue = kSecValueData as NSString
 let kSecClassGenericPasswordValue = kSecClassInternetPassword as NSString
+let kSecAttrServiceValue = kSecAttrService as NSString
+let kSecMatchLimitValue = kSecMatchLimit as NSString
 let kSecReturnDataValue = kSecReturnData as NSString
+let kSecMatchLimitOneValue = kSecMatchLimitOne as NSString
 
-class KeychainService {
+class KeychainService: NSObject {
     
-                //MARK: Save Somethin!
     class func save(data: NSString) {
-                    //Convert our string to data
         let dataFromString: NSData = data.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!
-                    //    print("Data From String: \(dataFromString)")
-                    //    print("")
         
-                    //Create our keychain query with values to save as its objects
-        let keychainQuery: NSMutableDictionary = NSMutableDictionary(objects: [dataFromString], forKeys: [kSecValueDataValue])
+        let keychainQuery: NSMutableDictionary = NSMutableDictionary(objects: [kSecClassGenericPasswordValue, userAccount, dataFromString], forKeys: [kSecClassValue, kSecAttrAccountValue, kSecValueDataValue])
         
-
-        
-                    // Delete any old item stored before our newone
+        // Delete any existing items
         SecItemDelete(keychainQuery)
         
-                    // Add the new keychain item. Pass in nil if we do not need the data back again.
-        SecItemAdd(keychainQuery, nil)
+        // Add the new keychain item
+        let status: OSStatus = SecItemAdd(keychainQuery, nil)
     }
     
-    
-    
-    
-    //MARK: Load Somethin!
-    
-    class func LoadFromKeychain() -> NSString? {
+    class func loadFromKeychain() -> NSString? {
+        // Instantiate a new default keychain query
+        // Tell the query to return a result
+        // Limit our results to one item
         
-        let keychainQuery: NSMutableDictionary = NSMutableDictionary(objects: [kSecClassGenericPasswordValue, kCFBooleanTrue], forKeys: [kSecClassValue, kSecReturnDataValue])
+        let keychainQuery: NSMutableDictionary = NSMutableDictionary(objects: [kSecClassGenericPasswordValue, userAccount, kCFBooleanTrue, kSecMatchLimitOneValue], forKeys: [kSecClassValue, kSecAttrAccountValue, kSecReturnDataValue, kSecMatchLimitValue])
         
-                    // Search for the keychain items
         var dataTypeRef :AnyObject?
-        SecItemCopyMatching(keychainQuery, &dataTypeRef)
         
+        // Search for the keychain items
+        let status: OSStatus = SecItemCopyMatching(keychainQuery, &dataTypeRef)
         
         var contentsOfKeychain: NSString?
+        
         if let retainedData = dataTypeRef as? NSData {
             contentsOfKeychain = NSString(data: retainedData, encoding: NSUTF8StringEncoding)
-            
+        } else {
+            print("Nothing was retrieved from the keychain. Status code \(status)")
         }
-        
+        //dataTypeRef?.release()
         return contentsOfKeychain
     }
 }
-
-

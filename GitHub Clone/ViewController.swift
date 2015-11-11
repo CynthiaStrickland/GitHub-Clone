@@ -1,39 +1,51 @@
 //
 //  ViewController.swift
-//  GitHub Clone
+//  GitHubClone
 //
-//  Created by Cynthia Whitlatch on 11/9/15.
+//  Created by Cynthia Whitlatch on 11/11/15.
 //  Copyright © 2015 Cynthia Whitlatch. All rights reserved.
 //
 
 import UIKit
-import Security
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
-    
-    
+    var repositories = [String]()
     
     @IBOutlet weak var tableView: UITableView!
+
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
         tableView.dataSource = self
+        GithubService.GETRepositories { (success, json) -> () in
+            print(json)
+        }
+
+    }
+
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
         
-         return cell
+        cell.textLabel?.text = repositories[indexPath.row]
+        return cell
         
         
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-     return 1
+        return repositories.count
         
     }
     
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     
 
 }
