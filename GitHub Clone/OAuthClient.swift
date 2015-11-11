@@ -58,6 +58,8 @@ class OAuth {
                                 })
                             }
                             
+                            print("rootObject")
+                            
                         } catch let error as NSError {
                             print(error)
                         }

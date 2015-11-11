@@ -20,6 +20,7 @@
 		3DE097501BF26F520066BDDF /* KeyChainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE0974F1BF26F520066BDDF /* KeyChainService.swift */; };
 		3DE097521BF2959C0066BDDF /* github.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DE097511BF2959C0066BDDF /* github.png */; };
 		3DE097541BF29B120066BDDF /* LoginViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE097531BF29B120066BDDF /* LoginViewcontroller.swift */; };
+		3DE097561BF3DC2F0066BDDF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE097551BF3DC2F0066BDDF /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +45,7 @@
 		3DE0971B1BF111BA0066BDDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DE0971D1BF111BA0066BDDF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3DE097201BF111BA0066BDDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3DE097221BF111BA0066BDDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3DE097221BF111BA0066BDDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "GitHub Clone/Assets.xcassets"; sourceTree = "<group>"; };
 		3DE097251BF111BA0066BDDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DE097271BF111BA0066BDDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DE0972C1BF111BA0066BDDF /* GitHubClone.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubClone.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +60,7 @@
 		3DE0974F1BF26F520066BDDF /* KeyChainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainService.swift; sourceTree = "<group>"; };
 		3DE097511BF2959C0066BDDF /* github.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = github.png; sourceTree = "<group>"; };
 		3DE097531BF29B120066BDDF /* LoginViewcontroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewcontroller.swift; sourceTree = "<group>"; };
+		3DE097551BF3DC2F0066BDDF /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,8 @@
 				3DE0972F1BF111BA0066BDDF /* GitHub CloneTests */,
 				3DE0973A1BF111BA0066BDDF /* GitHub CloneUITests */,
 				3DE097191BF111BA0066BDDF /* Products */,
+				3DE097221BF111BA0066BDDF /* Assets.xcassets */,
+				3DE097241BF111BA0066BDDF /* LaunchScreen.storyboard */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,16 +116,15 @@
 			isa = PBXGroup;
 			children = (
 				3DE0971F1BF111BA0066BDDF /* Main.storyboard */,
+				3DE097551BF3DC2F0066BDDF /* ProfileViewController.swift */,
 				3DE0971B1BF111BA0066BDDF /* AppDelegate.swift */,
-				3DE097531BF29B120066BDDF /* LoginViewcontroller.swift */,
 				3DE0971D1BF111BA0066BDDF /* ViewController.swift */,
 				3DE097491BF1283A0066BDDF /* OAuthClient.swift */,
 				3DE0974F1BF26F520066BDDF /* KeyChainService.swift */,
 				3DE0974B1BF13A8F0066BDDF /* Repo.swift */,
-				3DE097221BF111BA0066BDDF /* Assets.xcassets */,
-				3DE097241BF111BA0066BDDF /* LaunchScreen.storyboard */,
 				3DE097271BF111BA0066BDDF /* Info.plist */,
 				3DE097511BF2959C0066BDDF /* github.png */,
+				3DE097531BF29B120066BDDF /* LoginViewcontroller.swift */,
 			);
 			path = "GitHub Clone";
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				3DE097501BF26F520066BDDF /* KeyChainService.swift in Sources */,
 				3DE0971E1BF111BA0066BDDF /* ViewController.swift in Sources */,
 				3DE0971C1BF111BA0066BDDF /* AppDelegate.swift in Sources */,
+				3DE097561BF3DC2F0066BDDF /* ProfileViewController.swift in Sources */,
 				3DE0974A1BF1283A0066BDDF /* OAuthClient.swift in Sources */,
 				3DE0974C1BF13A8F0066BDDF /* Repo.swift in Sources */,
 			);
@@ -331,6 +335,7 @@
 				3DE097251BF111BA0066BDDF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = "GitHub Clone";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

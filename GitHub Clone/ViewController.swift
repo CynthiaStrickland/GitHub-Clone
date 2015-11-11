@@ -9,15 +9,31 @@
 import UIKit
 import Security
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    
+    
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        tableView.dataSource = self
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
+        
+         return cell
+        
+        
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+     return 1
+        
     }
+    
+    
 
 }
-

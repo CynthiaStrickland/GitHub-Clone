@@ -3,8 +3,44 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Profile View Controller-->
+        <scene sceneID="B5R-D9-wnv">
+            <objects>
+                <viewController id="sCf-be-uhk" customClass="ProfileViewController" customModule="GitHubClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AXF-XJ-0fu"/>
+                        <viewControllerLayoutGuide type="bottom" id="bgn-iD-Xlq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qsA-WS-cZ3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LMj-Uu-Xnm">
+                                <rect key="frame" x="125" y="46" width="350" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="CEK-2y-8vK"/>
+                                    <constraint firstAttribute="width" constant="350" id="DKj-jB-3Oe"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LMj-Uu-Xnm" firstAttribute="top" secondItem="AXF-XJ-0fu" secondAttribute="bottom" constant="26" id="83j-7t-Eu7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LMj-Uu-Xnm" secondAttribute="trailing" constant="105" id="9sD-Yz-iWZ"/>
+                            <constraint firstItem="LMj-Uu-Xnm" firstAttribute="leading" secondItem="qsA-WS-cZ3" secondAttribute="leadingMargin" constant="105" id="eOY-MP-uTm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="LMj-Uu-Xnm" id="Bdu-Kj-gXD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pxk-T6-4W7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-90" y="-533"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -17,17 +53,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main View Controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bB8-be-bdb">
-                                <rect key="frame" x="221" y="289" width="158" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MBb-CY-Jip">
+                                <rect key="frame" x="0.0" y="103" width="600" height="497"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bB8-be-bdb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OkF-1B-5Qc"/>
-                            <constraint firstItem="bB8-be-bdb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gnR-Hh-grY"/>
+                            <constraint firstAttribute="trailing" secondItem="MBb-CY-Jip" secondAttribute="trailing" id="31L-Hd-TfW"/>
+                            <constraint firstItem="MBb-CY-Jip" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6kj-eZ-fi9"/>
+                            <constraint firstItem="MBb-CY-Jip" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="83" id="7NS-KG-Ol5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MBb-CY-Jip" secondAttribute="bottom" id="QU8-ED-F0D"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rsH-ZP-25k">
@@ -35,10 +71,13 @@
                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="MBb-CY-Jip" id="yoC-5z-xtI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="570" y="-533"/>
+            <point key="canvasLocation" x="606" y="-533"/>
         </scene>
         <!--Login Viewcontroller-->
         <scene sceneID="wKd-gz-xlQ">
@@ -61,7 +100,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
                                 <state key="normal" title="Log In">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="login:" destination="3b6-zE-iQP" eventType="touchUpInside" id="PFi-3D-a7f"/>
