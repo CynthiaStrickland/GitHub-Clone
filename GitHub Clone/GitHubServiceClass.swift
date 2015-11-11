@@ -10,17 +10,15 @@ import Foundation
 
 class GithubService {
     
-    class func searchWithTerm(term: String, completion: (success: Bool, json: [AnyObject]) -> ()) {
+    class func searchWithTerm(term: String, completion: (success: Bool, json: [String: AnyObject]) -> ()) {
         
         // This is the official URL, use it. This will work.
         // https://api.github.com/search/repositories?q=term
         
     }
     
-    class func GETRepositories(completion: (success: Bool, json: [AnyObject]) -> ()) {
+    class func GETRepositories(completion: (success: Bool, json: [String: AnyObject]) -> ()) {
         
-        do {
-            
             if let token = OAuth.shared.token() {
                 guard let url = NSURL(string: "https://api.github.com/user/repos?access_token=\(token)") else { return }
                 print(token)
@@ -36,12 +34,12 @@ class GithubService {
                 
                 if let data = data {
                     do {
-                        let json = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers)
-                        print(json)
+                        let json = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as! [String: AnyObject]
+                    completion(success: true, json: json)
+                        
                     } catch _ {}
                 }
             }).resume()
         }
-        } catch _ { print("token failed") }
     }
 }

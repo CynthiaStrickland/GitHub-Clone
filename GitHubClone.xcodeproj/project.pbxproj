@@ -21,6 +21,7 @@
 		3DE097561BF3DC2F0066BDDF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE097551BF3DC2F0066BDDF /* ProfileViewController.swift */; };
 		3DE097581BF3ECEB0066BDDF /* GitHubServiceClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE097571BF3ECEB0066BDDF /* GitHubServiceClass.swift */; };
 		3DE0975A1BF3F5F00066BDDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE097591BF3F5F00066BDDF /* ViewController.swift */; };
+		3DE0975C1BF401A70066BDDF /* ParseJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE0975B1BF401A70066BDDF /* ParseJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		3DE097551BF3DC2F0066BDDF /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3DE097571BF3ECEB0066BDDF /* GitHubServiceClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubServiceClass.swift; sourceTree = "<group>"; };
 		3DE097591BF3F5F00066BDDF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3DE0975B1BF401A70066BDDF /* ParseJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				3DE097531BF29B120066BDDF /* LoginViewcontroller.swift */,
 				3DE097491BF1283A0066BDDF /* OAuthClient.swift */,
 				3DE097591BF3F5F00066BDDF /* ViewController.swift */,
+				3DE0975B1BF401A70066BDDF /* ParseJSON.swift */,
 				3DE097571BF3ECEB0066BDDF /* GitHubServiceClass.swift */,
 				3DE0974F1BF26F520066BDDF /* KeyChainService.swift */,
 				3DE097271BF111BA0066BDDF /* Info.plist */,
@@ -286,6 +289,7 @@
 				3DE097581BF3ECEB0066BDDF /* GitHubServiceClass.swift in Sources */,
 				3DE0974A1BF1283A0066BDDF /* OAuthClient.swift in Sources */,
 				3DE0975A1BF3F5F00066BDDF /* ViewController.swift in Sources */,
+				3DE0975C1BF401A70066BDDF /* ParseJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
