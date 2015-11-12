@@ -15,12 +15,12 @@ import Foundation
 class Repository {
     
     let name: String
-    let repo: String?
-    let user: String?
+    let description: String?
+    let owner: [String: AnyObject]
     
-    init(name: String, repo: String?, user: String) {
+    init(name: String, description: String?, owner: [String:AnyObject]) {
         self.name = name
-        self.repo = repo
-        self.user = user
+        self.description = description
+        self.owner = owner
     }
 }

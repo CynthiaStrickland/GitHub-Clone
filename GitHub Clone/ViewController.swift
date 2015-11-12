@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var repositories = [String]()
+    var repositories = [Repository]()
     
     @IBOutlet weak var tableView: UITableView!
 
@@ -18,8 +18,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         
         tableView.dataSource = self
-        GithubService.GETRepositories { (success, json) -> () in
-            print(json)
+        Repository.update { (success, repositories) -> () in
+            print(repositories)
         }
     }
 
@@ -32,7 +32,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
         let repository = repositories[indexPath.row]
-        cell.textLabel?.text = repository
+        cell.textLabel?.text = repository.description
         
         return cell
     }

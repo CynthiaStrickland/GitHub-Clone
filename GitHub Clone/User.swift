@@ -11,18 +11,9 @@ import Foundation
 class User {
     
     let name: String
-    let login: String
-    let location: String?
-    let blog: String?
-    let createdAt: NSDate
-    let followers: Int
-    
-    init(name: String, login: String, location: String?, blog: String?, createdAt: NSDate, followers: Int) {
+
+    init(name: String) {
         self.name = name
-        self.login = login
-        self.location = location
-        self.blog = blog
-        self.createdAt = createdAt
-        self.followers = followers
+
     }
 }
