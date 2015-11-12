@@ -8,38 +8,50 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
-    var tableViewData = [Repository]()
-    
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        tableView.dataSource = self
-        Repository.update { (success, repositories) -> () in
-            print(repositories)
+    
+    var tableViewData = [Repository]() {
+        didSet {
+            self.tableView.reloadData()
         }
     }
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        Repository.update { (success, repositories) -> () in
+            if let repositories = repositories {
+                self.tableViewData = repositories
+            }
+        }
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    // MARK: UITableViewDataSource
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableViewData.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
         let repoList = tableViewData[indexPath.row]
         cell.textLabel?.text = repoList.name
-        
         return cell
     }
-
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // MARK: UISearchBarDelegate
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        print(searchBar.text)
     }
+
+        
+    
 }

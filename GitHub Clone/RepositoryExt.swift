@@ -30,8 +30,10 @@ extension Repository {
                     repositories.append(repository)
             }
             }
-            print(repositories)
-            completion(success: true, repositories: repositories)
+            
+            NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                completion(success: true, repositories: repositories)
+            })
         }
         
     }

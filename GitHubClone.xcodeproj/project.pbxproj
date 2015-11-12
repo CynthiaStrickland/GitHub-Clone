@@ -27,6 +27,7 @@
 		3DE097621BF4063D0066BDDF /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE097611BF4063D0066BDDF /* Owner.swift */; };
 		3DE097671BF52F810066BDDF /* warren.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DE097661BF52F810066BDDF /* warren.png */; };
 		3DE097691BF5349C0066BDDF /* SPILLAGE.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3DE097681BF5349C0066BDDF /* SPILLAGE.jpg */; };
+		3DE0976B1BF53AB50066BDDF /* cat8 copy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3DE0976A1BF53AB50066BDDF /* cat8 copy.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		3DE097611BF4063D0066BDDF /* Owner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		3DE097661BF52F810066BDDF /* warren.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = warren.png; path = ../warren.png; sourceTree = "<group>"; };
 		3DE097681BF5349C0066BDDF /* SPILLAGE.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SPILLAGE.jpg; sourceTree = "<group>"; };
+		3DE0976A1BF53AB50066BDDF /* cat8 copy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cat8 copy.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				3DE097271BF111BA0066BDDF /* Info.plist */,
 				3DE097661BF52F810066BDDF /* warren.png */,
 				3DE097681BF5349C0066BDDF /* SPILLAGE.jpg */,
+				3DE0976A1BF53AB50066BDDF /* cat8 copy.jpg */,
 				3DE097511BF2959C0066BDDF /* github.png */,
 			);
 			path = "GitHub Clone";
@@ -281,6 +284,7 @@
 				3DE097521BF2959C0066BDDF /* github.png in Resources */,
 				3DE097691BF5349C0066BDDF /* SPILLAGE.jpg in Resources */,
 				3DE097261BF111BA0066BDDF /* LaunchScreen.storyboard in Resources */,
+				3DE0976B1BF53AB50066BDDF /* cat8 copy.jpg in Resources */,
 				3DE097231BF111BA0066BDDF /* Assets.xcassets in Resources */,
 				3DE097211BF111BA0066BDDF /* Main.storyboard in Resources */,
 			);

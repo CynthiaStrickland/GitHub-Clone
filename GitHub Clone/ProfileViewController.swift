@@ -16,7 +16,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let image = UIImage(named: "spillage.jpg")
+        let image = UIImage(named: "cat8 copy.jpg")
         let imageView = UIImageView(image: image)
         self.imageView.addSubview(imageView)
     }
