@@ -1,5 +1,5 @@
 //
-//  ParseJSON.swift
+//  RepositoryExt.swift
 //  GitHubClone
 //
 //  Created by Cynthia Whitlatch on 11/11/15.

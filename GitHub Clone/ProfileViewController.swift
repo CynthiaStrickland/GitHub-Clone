@@ -10,13 +10,15 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    
     @IBOutlet weak var imageView: UIImageView!
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let image = UIImage(named: "spillage.jpg")
+        let imageView = UIImageView(image: image)
+        self.imageView.addSubview(imageView)
     }
 
     override func didReceiveMemoryWarning() {

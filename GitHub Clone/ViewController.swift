@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var repositories = [Repository]()
+    var tableViewData = [Repository]()
     
     @IBOutlet weak var tableView: UITableView!
 
@@ -25,14 +25,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return repositories.count
+        return tableViewData.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
-        let repository = repositories[indexPath.row]
-        cell.textLabel?.text = repository.description
+        let repoList = tableViewData[indexPath.row]
+        cell.textLabel?.text = repoList.name
         
         return cell
     }
