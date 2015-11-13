@@ -11,13 +11,11 @@ import Foundation
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
-    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
     var tableViewData = [Repository]() {
         didSet {
             self.tableView.reloadData()
-            searchBar.delegate = self
         }
     }
 
@@ -38,30 +36,36 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // MARK: UITableViewDataSource
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableViewData.count
+        return 2
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("RepoCell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
         
-        let repoList = tableViewData[indexPath.row]
-        cell.textLabel?.text = repoList.name
+        if indexPath.row == 0 {
+            cell.textLabel?.text = "User"
+            // Set the image...
+        } else {
+            cell.textLabel?.text = "Repo"
+            // Set the image...
+        }
+        
         return cell
+
     }
     
-    // MARK: UISearchBarDelegate
-
-    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-        GithubService.repositoriesForSearchTerm(searchBar.text!)
-        searchBar.resignFirstResponder()
-}
-
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-            searchBar.resignFirstResponder()
-        return true
-}
+    // ...
     
-//    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-//        self.searchBar.endEditing(true)
-//    }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if indexPath.row == 0 {
+            self.performSegueWithIdentifier("userSegue", sender: nil)
+        }
+        
+        if indexPath.row == 1 {
+            self.performSegueWithIdentifier("repoSegue", sender: nil)
+        }
+        
+    }
+    
 }

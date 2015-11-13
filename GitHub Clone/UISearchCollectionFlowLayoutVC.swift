@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class UISearchCollectionFlowLayoutVC: UICollectionViewFlowLayout {
 
@@ -15,7 +16,7 @@ class UISearchCollectionFlowLayoutVC: UICollectionViewFlowLayout {
         
         let frame = UIScreen.mainScreen().bounds
         let width = CGRectGetWidth(frame)
-        let cellWidth = (width / columns) - 2.0
+        let cellWidth = (width / columns) - 1.0
         let size = CGSizeMake( cellWidth, cellWidth)
         
         self.itemSize = size

@@ -9,7 +9,7 @@
 import UIKit
 
 
-class UserSearchViewController: UIViewController, UISearchBarDelegate, UINavigationControllerDelegate {
+class UserSearchViewController: UIViewController, UISearchBarDelegate {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -21,20 +21,16 @@ class UserSearchViewController: UIViewController, UISearchBarDelegate, UINavigat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        searchBar.delegate = self
-        collectionView.dataSource = self
+        self.searchBar.delegate = self
+        self.collectionView.dataSource = self
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.delegate = self
-        
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
-        navigationController?.delegate = nil
-        
     }
     
 //    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -52,7 +48,7 @@ class UserSearchViewController: UIViewController, UISearchBarDelegate, UINavigat
     func searchBar(searchBar: UISearchBar, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
         
         return text.validateForURL()
-        }
+    }
 }
 
 //extension UserSearchViewController : UISearchBarDelegate {

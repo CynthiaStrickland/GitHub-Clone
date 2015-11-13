@@ -11,6 +11,8 @@
 		3D4EB7131BF6241900953B98 /* UserSearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4EB7121BF6241900953B98 /* UserSearchCollectionViewCell.swift */; };
 		3D4EB7151BF625F900953B98 /* UserAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4EB7141BF625F900953B98 /* UserAvatar.swift */; };
 		3D4EB71B1BF6424900953B98 /* UISearchCollectionFlowLayoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4EB71A1BF6424900953B98 /* UISearchCollectionFlowLayoutVC.swift */; };
+		3D4EB71D1BF661C600953B98 /* UserJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4EB71C1BF661C600953B98 /* UserJSONParser.swift */; };
+		3D4EB71F1BF67F3E00953B98 /* RepoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4EB71E1BF67F3E00953B98 /* RepoTableViewController.swift */; };
 		3DE0971C1BF111BA0066BDDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE0971B1BF111BA0066BDDF /* AppDelegate.swift */; };
 		3DE097211BF111BA0066BDDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE0971F1BF111BA0066BDDF /* Main.storyboard */; };
 		3DE097231BF111BA0066BDDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DE097221BF111BA0066BDDF /* Assets.xcassets */; };
@@ -58,6 +60,8 @@
 		3D4EB7121BF6241900953B98 /* UserSearchCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		3D4EB7141BF625F900953B98 /* UserAvatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAvatar.swift; sourceTree = "<group>"; };
 		3D4EB71A1BF6424900953B98 /* UISearchCollectionFlowLayoutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISearchCollectionFlowLayoutVC.swift; sourceTree = "<group>"; };
+		3D4EB71C1BF661C600953B98 /* UserJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserJSONParser.swift; sourceTree = "<group>"; };
+		3D4EB71E1BF67F3E00953B98 /* RepoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoTableViewController.swift; sourceTree = "<group>"; };
 		3DE097181BF111BA0066BDDF /* GitHubClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DE0971B1BF111BA0066BDDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DE097201BF111BA0066BDDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -142,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				3DE0971F1BF111BA0066BDDF /* Main.storyboard */,
+				3D4EB71E1BF67F3E00953B98 /* RepoTableViewController.swift */,
 				3DE0971B1BF111BA0066BDDF /* AppDelegate.swift */,
 				3D4EB71A1BF6424900953B98 /* UISearchCollectionFlowLayoutVC.swift */,
 				3D4EB7121BF6241900953B98 /* UserSearchCollectionViewCell.swift */,
@@ -187,6 +192,7 @@
 			children = (
 				3DE0976E1BF556380066BDDF /* Regex.swift */,
 				3DE0975B1BF401A70066BDDF /* RepositoryExt.swift */,
+				3D4EB71C1BF661C600953B98 /* UserJSONParser.swift */,
 				3DE0975D1BF403EC0066BDDF /* Repository.swift */,
 				3DE0975F1BF405FA0066BDDF /* User.swift */,
 				3DE097611BF4063D0066BDDF /* Owner.swift */,
@@ -336,6 +342,7 @@
 				3DE097581BF3ECEB0066BDDF /* GitHubServiceClass.swift in Sources */,
 				3DE0976F1BF556380066BDDF /* Regex.swift in Sources */,
 				3DE0974A1BF1283A0066BDDF /* OAuthClient.swift in Sources */,
+				3D4EB71D1BF661C600953B98 /* UserJSONParser.swift in Sources */,
 				3DE0975A1BF3F5F00066BDDF /* ViewController.swift in Sources */,
 				3DE0975C1BF401A70066BDDF /* RepositoryExt.swift in Sources */,
 				3D4EB7151BF625F900953B98 /* UserAvatar.swift in Sources */,
@@ -343,6 +350,7 @@
 				3D4EB7131BF6241900953B98 /* UserSearchCollectionViewCell.swift in Sources */,
 				3D4EB71B1BF6424900953B98 /* UISearchCollectionFlowLayoutVC.swift in Sources */,
 				3DE097621BF4063D0066BDDF /* Owner.swift in Sources */,
+				3D4EB71F1BF67F3E00953B98 /* RepoTableViewController.swift in Sources */,
 				3DE097601BF405FA0066BDDF /* User.swift in Sources */,
 				3DE097711BF562320066BDDF /* WebViewController.swift in Sources */,
 				3DE0975E1BF403EC0066BDDF /* Repository.swift in Sources */,
