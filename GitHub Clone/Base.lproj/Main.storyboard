@@ -57,6 +57,33 @@
             </objects>
             <point key="canvasLocation" x="1418" y="313"/>
         </scene>
+        <!--Web View Controller-->
+        <scene sceneID="DrW-3U-SeK">
+            <objects>
+                <viewController id="IXg-Kd-Pel" customClass="WebViewController" customModule="GitHubClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rTQ-2y-qUL"/>
+                        <viewControllerLayoutGuide type="bottom" id="zFN-P7-Mbe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cGd-Mq-mfq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bx7-gf-lHN">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="Bx7-gf-lHN" id="NwN-gY-Ubr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6PS-E2-P7C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1416" y="-1226"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -69,7 +96,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="lnD-Rq-Jjw">
+                            <searchBar contentMode="redraw" placeholder="Search GitHUB Repository" translatesAutoresizingMaskIntoConstraints="NO" id="lnD-Rq-Jjw">
                                 <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -120,6 +147,12 @@
                             <color key="tintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                             <connections>
                                 <segue destination="sCf-be-uhk" kind="show" id="PhM-CT-bwn"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="WebView" id="5fz-oa-a4m">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="IXg-Kd-Pel" kind="show" id="HFF-6G-hIa"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -199,7 +232,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleAspectFit" id="JwG-OP-pEU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" patternImage="CAC839A3-2B42-4273-8380-6B07FE6D7EE3" colorSpace="pattern"/>
+                        <color key="tintColor" patternImage="742738D3-BCFF-4E13-8A77-48F736D18163" colorSpace="pattern"/>
                         <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -213,7 +246,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="CAC839A3-2B42-4273-8380-6B07FE6D7EE3" width="640" height="920">
+        <image name="742738D3-BCFF-4E13-8A77-48F736D18163" width="640" height="920">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

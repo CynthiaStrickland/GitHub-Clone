@@ -44,4 +44,20 @@ class GithubService {
             }).resume()
         }
     }
+    
+    class func repositoriesForSearchTerm(searchTerm : String) {
+        let baseURL = "http://api.github.com/search/repositories?q=\(searchTerm)"
+        
+        if let url = NSURL(string: baseURL) {
+            NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
+                if let _ = error {
+                    print("error")
+                } else if let httpResponse = response as? NSHTTPURLResponse {
+                    print(httpResponse)
+                    
+                }
+            }).resume()
+        }
+        
+    }
 }

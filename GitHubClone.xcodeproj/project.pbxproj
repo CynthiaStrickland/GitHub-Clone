@@ -28,6 +28,8 @@
 		3DE097671BF52F810066BDDF /* warren.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DE097661BF52F810066BDDF /* warren.png */; };
 		3DE097691BF5349C0066BDDF /* SPILLAGE.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3DE097681BF5349C0066BDDF /* SPILLAGE.jpg */; };
 		3DE0976B1BF53AB50066BDDF /* cat8 copy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3DE0976A1BF53AB50066BDDF /* cat8 copy.jpg */; };
+		3DE0976F1BF556380066BDDF /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE0976E1BF556380066BDDF /* Regex.swift */; };
+		3DE097711BF562320066BDDF /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE097701BF562320066BDDF /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		3DE097661BF52F810066BDDF /* warren.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = warren.png; path = ../warren.png; sourceTree = "<group>"; };
 		3DE097681BF5349C0066BDDF /* SPILLAGE.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SPILLAGE.jpg; sourceTree = "<group>"; };
 		3DE0976A1BF53AB50066BDDF /* cat8 copy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cat8 copy.jpg"; sourceTree = "<group>"; };
+		3DE0976E1BF556380066BDDF /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
+		3DE097701BF562320066BDDF /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +138,7 @@
 				3DE097551BF3DC2F0066BDDF /* ProfileViewController.swift */,
 				3DE097591BF3F5F00066BDDF /* ViewController.swift */,
 				3DE097571BF3ECEB0066BDDF /* GitHubServiceClass.swift */,
+				3DE097701BF562320066BDDF /* WebViewController.swift */,
 				3DE0974F1BF26F520066BDDF /* KeyChainService.swift */,
 				3DE097491BF1283A0066BDDF /* OAuthClient.swift */,
 				3DE097531BF29B120066BDDF /* LoginViewcontroller.swift */,
@@ -168,6 +173,7 @@
 		3DE097631BF406850066BDDF /* MODELS */ = {
 			isa = PBXGroup;
 			children = (
+				3DE0976E1BF556380066BDDF /* Regex.swift */,
 				3DE0975B1BF401A70066BDDF /* RepositoryExt.swift */,
 				3DE0975D1BF403EC0066BDDF /* Repository.swift */,
 				3DE0975F1BF405FA0066BDDF /* User.swift */,
@@ -316,11 +322,13 @@
 				3DE0971C1BF111BA0066BDDF /* AppDelegate.swift in Sources */,
 				3DE097561BF3DC2F0066BDDF /* ProfileViewController.swift in Sources */,
 				3DE097581BF3ECEB0066BDDF /* GitHubServiceClass.swift in Sources */,
+				3DE0976F1BF556380066BDDF /* Regex.swift in Sources */,
 				3DE0974A1BF1283A0066BDDF /* OAuthClient.swift in Sources */,
 				3DE0975A1BF3F5F00066BDDF /* ViewController.swift in Sources */,
 				3DE0975C1BF401A70066BDDF /* RepositoryExt.swift in Sources */,
 				3DE097621BF4063D0066BDDF /* Owner.swift in Sources */,
 				3DE097601BF405FA0066BDDF /* User.swift in Sources */,
+				3DE097711BF562320066BDDF /* WebViewController.swift in Sources */,
 				3DE0975E1BF403EC0066BDDF /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

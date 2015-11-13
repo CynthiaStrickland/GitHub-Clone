@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
@@ -16,6 +17,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var tableViewData = [Repository]() {
         didSet {
             self.tableView.reloadData()
+            searchBar.delegate = self
         }
     }
 
@@ -41,17 +43,25 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
+        
         let repoList = tableViewData[indexPath.row]
         cell.textLabel?.text = repoList.name
         return cell
     }
     
     // MARK: UISearchBarDelegate
-    
-    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-        print(searchBar.text)
-    }
 
-        
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        GithubService.repositoriesForSearchTerm(searchBar.text!)
+        searchBar.resignFirstResponder()
+}
+
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+            searchBar.resignFirstResponder()
+        return true
+}
     
+//    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+//        self.searchBar.endEditing(true)
+//    }
 }

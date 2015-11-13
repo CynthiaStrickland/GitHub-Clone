@@ -26,7 +26,7 @@ class KeychainService: NSObject {
         SecItemDelete(keychainQuery)
         
         // Add the new keychain item
-        let status: OSStatus = SecItemAdd(keychainQuery, nil)
+        let _ : OSStatus = SecItemAdd(keychainQuery, nil)
     }
     
     class func loadFromKeychain() -> NSString? {
