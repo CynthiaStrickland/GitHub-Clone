@@ -21,8 +21,8 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = NSURL(string: "https://github.com/login/oauth/access_token?\(code)&client_id=\(kClientId)&client_secret=\(kClientSecret)")
-        webView.loadRequest(NSURLRequest(URL: url))
+        let url = NSURL(string: "https://github.com")
+        webView.loadRequest(NSURLRequest(URL: url!))
         webView.allowsBackForwardNavigationGestures = true
         
     }
