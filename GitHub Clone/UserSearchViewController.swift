@@ -9,7 +9,7 @@
 import UIKit
 
 
-class UserSearchViewController: UIViewController, UISearchBarDelegate {
+class UserSearchViewController: UIViewController, UISearchBarDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -37,34 +37,40 @@ class UserSearchViewController: UIViewController, UISearchBarDelegate {
         
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        
+//        if segue.identifier == "UserSearchCollectionViewCell" {
+//            
+//            var destination = segue.destinationViewController as? ProfileViewController, indexPath = collectionView.indexPathsForSelectedItems()!.first! as NSIndexPath {
+//                let user = users[indexPath.row]
+//                destination!.selectedUser = user
+//            }
+//        }
+//    }
+
+    // MARK:   REGEX
+    func searchBar(searchBar: UISearchBar, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
         
-        if segue.identifier == "UserSearchCollectionViewCell" {
-            
-            var destination = segue.destinationViewController as? UserSearchViewController, indexPath = collectionView.indexPathsForSelectedItems()!.first! as NSIndexPath {
-                let user = users[indexPath.row]
-                destination.selectedUser = user
-            }
+        return text.validateForURL()
         }
-    }
-    
 }
 
-extension UserSearchViewController : UISearchBarDelegate {
-    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
-        
-        GithubService.repositoriesForSearchTerm(searchBar.text!, userSearchCallback: { (errorDescription, users) -> (Void) in
-            if let _ = errorDescription {
-                
-            } else if let users = users {
-                self.users = users
-                self.collectionView.reloadData()
-                
-            }
-        })
-    }
-    
+//extension UserSearchViewController : UISearchBarDelegate {
+//    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+//        searchBar.resignFirstResponder()
+//        
+//        GithubService.repositoriesForSearchTerm(searchBar.text!, userSearchCallback: { (errorDescription, users) -> (Void) in
+//            if let _ = errorDescription {
+//                
+//            } else if let users = users {
+//                self.users = users
+//                self.collectionView.reloadData()
+//                
+//            }
+//        })
+//    }
+//}
+
 extension UserSearchViewController : UICollectionViewDataSource {
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return users.count
@@ -81,7 +87,7 @@ extension UserSearchViewController : UICollectionViewDataSource {
         cell.tag++
         let tag = cell.tag
         
-        var user = users[indexPath.row]
+        let user = users[indexPath.row]
         
         if let image = user.image {
             cell.avatarImage.image = image
@@ -100,13 +106,6 @@ extension UserSearchViewController : UICollectionViewDataSource {
             })
         }
         return cell
-    }
-    
-    // MARK:   REGEX
-    func searchBar(searchBar: UISearchBar, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
-        
-        return text.validateForURL()
-        }
     }
 }
 

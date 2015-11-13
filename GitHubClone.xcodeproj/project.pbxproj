@@ -10,6 +10,7 @@
 		3D4EB7111BF622FB00953B98 /* UserSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4EB7101BF622FB00953B98 /* UserSearchViewController.swift */; };
 		3D4EB7131BF6241900953B98 /* UserSearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4EB7121BF6241900953B98 /* UserSearchCollectionViewCell.swift */; };
 		3D4EB7151BF625F900953B98 /* UserAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4EB7141BF625F900953B98 /* UserAvatar.swift */; };
+		3D4EB71B1BF6424900953B98 /* UISearchCollectionFlowLayoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4EB71A1BF6424900953B98 /* UISearchCollectionFlowLayoutVC.swift */; };
 		3DE0971C1BF111BA0066BDDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE0971B1BF111BA0066BDDF /* AppDelegate.swift */; };
 		3DE097211BF111BA0066BDDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE0971F1BF111BA0066BDDF /* Main.storyboard */; };
 		3DE097231BF111BA0066BDDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DE097221BF111BA0066BDDF /* Assets.xcassets */; };
@@ -56,6 +57,7 @@
 		3D4EB7101BF622FB00953B98 /* UserSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchViewController.swift; sourceTree = "<group>"; };
 		3D4EB7121BF6241900953B98 /* UserSearchCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		3D4EB7141BF625F900953B98 /* UserAvatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAvatar.swift; sourceTree = "<group>"; };
+		3D4EB71A1BF6424900953B98 /* UISearchCollectionFlowLayoutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISearchCollectionFlowLayoutVC.swift; sourceTree = "<group>"; };
 		3DE097181BF111BA0066BDDF /* GitHubClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DE0971B1BF111BA0066BDDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DE097201BF111BA0066BDDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -140,10 +142,11 @@
 			isa = PBXGroup;
 			children = (
 				3DE0971F1BF111BA0066BDDF /* Main.storyboard */,
-				3D4EB7121BF6241900953B98 /* UserSearchCollectionViewCell.swift */,
-				3D4EB7141BF625F900953B98 /* UserAvatar.swift */,
-				3D4EB7101BF622FB00953B98 /* UserSearchViewController.swift */,
 				3DE0971B1BF111BA0066BDDF /* AppDelegate.swift */,
+				3D4EB71A1BF6424900953B98 /* UISearchCollectionFlowLayoutVC.swift */,
+				3D4EB7121BF6241900953B98 /* UserSearchCollectionViewCell.swift */,
+				3D4EB7101BF622FB00953B98 /* UserSearchViewController.swift */,
+				3D4EB7141BF625F900953B98 /* UserAvatar.swift */,
 				3DE097551BF3DC2F0066BDDF /* ProfileViewController.swift */,
 				3DE097591BF3F5F00066BDDF /* ViewController.swift */,
 				3DE097571BF3ECEB0066BDDF /* GitHubServiceClass.swift */,
@@ -338,6 +341,7 @@
 				3D4EB7151BF625F900953B98 /* UserAvatar.swift in Sources */,
 				3D4EB7111BF622FB00953B98 /* UserSearchViewController.swift in Sources */,
 				3D4EB7131BF6241900953B98 /* UserSearchCollectionViewCell.swift in Sources */,
+				3D4EB71B1BF6424900953B98 /* UISearchCollectionFlowLayoutVC.swift in Sources */,
 				3DE097621BF4063D0066BDDF /* Owner.swift in Sources */,
 				3DE097601BF405FA0066BDDF /* User.swift in Sources */,
 				3DE097711BF562320066BDDF /* WebViewController.swift in Sources */,

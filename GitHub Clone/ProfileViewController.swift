@@ -13,17 +13,19 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     
+    var selectedUser : User!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let image = UIImage(named: "cat8 copy.jpg")
-        let imageView = UIImageView(image: image)
-        self.imageView.addSubview(imageView)
+//        let image = UIImage(named: "cat8 copy.jpg")
+//        let imageView = UIImageView(image: image)
+//        self.imageView.addSubview(imageView)
+        imageView.image = selectedUser.image
+
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    
+        override func didReceiveMemoryWarning() {
+            super.didReceiveMemoryWarning()
+        }
     }
-
-
-}
