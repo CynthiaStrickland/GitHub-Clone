@@ -8,34 +8,40 @@
 
 import UIKit
 
-class RepoTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+//class RepoTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    @IBOutlet weak var repoTableView: UITableView!
-    @IBOutlet weak var repoSearchBar: UISearchBar!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        repoSearchBar.delegate = self
-
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-    }
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        return
-    }
-}
-
-extension RepoTableViewController : UISearchBarDelegate {
-    func searchBarSearchButtonClicked(repoSearchBar: UISearchBar) {
-        
-        GithubService.repositoriesForSearchTerm(repoSearchBar.text!)
-    }
-    
-}
+//    @IBOutlet weak var repoTableView: UITableView!
+//    @IBOutlet weak var repoSearchBar: UISearchBar!
+//    
+//    var tableViewData = [Repository]() {
+//        didSet {
+//            self.tableViewData.reloadData()
+//        }
+//    }
+//    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        repoSearchBar.delegate = self
+//
+//    }
+//
+//    override func didReceiveMemoryWarning() {
+//        super.didReceiveMemoryWarning()
+//    }
+//    
+//    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return self.tableViewData.count
+//    }
+//
+//    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+//        
+//    let cell = tableView.dequeueReusableCellWithReuseIdentifier("repoSegue", forIndexPath: indexPath) as! RepoTableViewController
+//    }
+//}
+//
+//extension RepoTableViewController : UISearchBarDelegate {
+//    func searchBarSearchButtonClicked(repoSearchBar: UISearchBar) {
+//        
+//        GithubService.repositoriesForSearchTerm(repoSearchBar.text!)
+//    }
+//}

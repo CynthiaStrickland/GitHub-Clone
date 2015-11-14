@@ -44,10 +44,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         if indexPath.row == 0 {
             cell.textLabel?.text = "User"
-            // Set the image...
+            let image = UIImage(named: "cat8 copy.jpg")
+            let imageView = UIImageView(image: image)
         } else {
             cell.textLabel?.text = "Repo"
-            // Set the image...
         }
         
         return cell

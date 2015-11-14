@@ -10,6 +10,7 @@ import Foundation
 extension String {
     
     func validateForURL() -> Bool {
+        
         var error: NSError?
         
         do {
