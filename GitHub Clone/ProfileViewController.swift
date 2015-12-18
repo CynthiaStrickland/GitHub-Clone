@@ -9,7 +9,6 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
     
     @IBOutlet weak var imageView: UIImageView!
     
@@ -19,16 +18,9 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         
         imageView.image = selectedUser.image
-
     }
     
-        override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning() {
             super.didReceiveMemoryWarning()
         }
     }
-
-
-
-//        let image = UIImage(named: "cat8 copy.jpg")
-//        let imageView = UIImageView(image: image)
-//        self.imageView.addSubview(imageView)

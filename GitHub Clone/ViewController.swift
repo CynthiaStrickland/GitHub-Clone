@@ -45,7 +45,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if indexPath.row == 0 {
             cell.textLabel?.text = "User"
             let image = UIImage(named: "cat8 copy.jpg")
-            let imageView = UIImageView(image: image)
+            _ = UIImageView(image: image)
         } else {
             cell.textLabel?.text = "Repo"
         }

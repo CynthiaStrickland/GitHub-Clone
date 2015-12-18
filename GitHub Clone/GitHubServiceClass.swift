@@ -45,19 +45,51 @@ class GithubService {
         }
     }
     
-    class func repositoriesForSearchTerm(searchTerm : String) {
-        let baseURL = "http://api.github.com/search/repositories?q=\(searchTerm)"
+    class func userForSearchTerm(searchTerm : String, userSearchCallback : (errorDescription : String?, users :[User]?) -> (Void)) {
+        let baseURL = "https://api.github.com/search/users"
+        let finalURL = baseURL + "?q=\(searchTerm)"
+        let request = NSMutableURLRequest(URL: NSURL(string: finalURL)!)
+        if let token = KeychainService.loadFromKeychain() {
+            request.setValue("token \(token)", forHTTPHeaderField: "Authorization")
+        }
         
-        if let url = NSURL(string: baseURL) {
-            NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
-                if let _ = error {
+        if let url = NSURL(string: finalURL) {
+            NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
+                if let error = error {
                     print("error")
                 } else if let httpResponse = response as? NSHTTPURLResponse {
                     print(httpResponse)
+                    
+                    if httpResponse.statusCode == 200 {
+                        if let users = UserJSONParser.usersFromJSONData(data) {
+                            NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                                userSearchCallback(errorDescription: nil, users: users)
+                            })
+                        }
+                    }
+                    
+                    userSearchCallback(errorDescription: nil, users: nil)
+                    
                     
                 }
             }).resume()
         }
         
     }
+
+//    class func repositoriesForSearchTerm(searchTerm : String) {
+//        let baseURL = "http://api.github.com/search/repositories?q=\(searchTerm)"
+//        
+//        if let url = NSURL(string: baseURL) {
+//            NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
+//                if let _ = error {
+//                    print("error")
+//                } else if let httpResponse = response as? NSHTTPURLResponse {
+//                    print(httpResponse)
+//                    
+//                }
+//            }).resume()
+//        }
+//        
+//    }
 }
