@@ -61,7 +61,7 @@ class GithubService {
                     print(httpResponse)
                     
                     if httpResponse.statusCode == 200 {
-                        if let users = UserJSONParser.usersFromJSONData(data) {
+                        if let users = UserJSONParser.usersFromJSONData(data!) {
                             NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
                                 userSearchCallback(errorDescription: nil, users: users)
                             })

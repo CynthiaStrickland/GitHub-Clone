@@ -8,15 +8,16 @@
 import Foundation
 
 extension String {
-    func validateForURL() -> Bool {
+    func validateUrl() throws -> Bool {
+    
+        let regex = try! NSRegularExpression(pattern: "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}$", options: [.CaseInsensitive])
         
-        var error : NSError?
-        
-        if let regex = NSRegularExpression(pattern: "[^0-9a-zA-Z\n]", options: nil, error: &error)
-        {
-            let matches = regex.numberOfMatchesInString(self, options: nil, range:NSRange(location: 0, length: count(self)))
-            return matches > 0 ?  false : true
+        return regex.firstMatchInString(self, options:[],
+            range: NSMakeRange(0, utf16.count)) != nil
+        do {
+            try "person@email.com".validateUrl()
+        } catch {
+            print(error)
         }
-        return false
     }
 }

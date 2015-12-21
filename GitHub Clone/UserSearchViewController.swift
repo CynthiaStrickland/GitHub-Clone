@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Foundation
 
 class UserSearchViewController: UIViewController {
     
@@ -34,9 +34,7 @@ class UserSearchViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
         if segue.identifier == "UserSearchCollectionViewCell" {
-            
             var destination = segue.destinationViewController as? ProfileViewController, indexPath = collectionView.indexPathsForSelectedItems()!.first! as NSIndexPath {
                 let user = users[indexPath.row]
                 destination!.selectedUser = user
@@ -46,8 +44,8 @@ class UserSearchViewController: UIViewController {
 
     // MARK:   REGEX
     func searchBar(searchBar: UISearchBar, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        return true
         
-        return text.validateForURL()
     }
 }
 
