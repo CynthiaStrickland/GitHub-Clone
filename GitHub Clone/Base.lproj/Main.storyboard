@@ -105,7 +105,7 @@
                     </view>
                     <connections>
                         <outlet property="RepoSearchBar" destination="RGm-DX-HpJ" id="X8Q-Mn-nSz"/>
-                        <outlet property="RepoSearchTableView" destination="aYr-lf-QjG" id="Fi6-k5-3Ng"/>
+                        <outlet property="RepoTableViewController" destination="aYr-lf-QjG" id="XY9-Ez-Gv2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hRN-nP-ajC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -124,7 +124,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fJc-ca-zdN">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fJc-ca-zdN">
                                 <rect key="frame" x="0.0" y="44" width="600" height="556"/>
                                 <color key="backgroundColor" red="0.32203380521136182" green="0.70887354765331256" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aZj-DJ-mq9">
@@ -135,7 +135,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UserSearchCollectionViewCell" id="m4y-T5-oDG" customClass="UserSearchCollectionViewCell" customModule="GitHubClone" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="212" height="212"/>
+                                        <rect key="frame" x="0.0" y="64" width="212" height="212"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="212" height="212"/>
@@ -166,7 +166,7 @@
                                     <outlet property="delegate" destination="HCY-p0-8ht" id="tKB-Gs-bfk"/>
                                 </connections>
                             </collectionView>
-                            <searchBar contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZNt-hW-5tT">
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ZNt-hW-5tT">
                                 <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -292,6 +292,7 @@
                     <connections>
                         <outlet property="tableView" destination="MBb-CY-Jip" id="g9B-Nr-2kk"/>
                         <segue destination="DAi-ec-WSw" kind="show" identifier="repoSegue" id="fc6-rB-PL6"/>
+                        <segue destination="HCY-p0-8ht" kind="show" identifier="userSegue" id="XoE-xd-ltU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -365,7 +366,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleAspectFit" id="JwG-OP-pEU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" patternImage="01E1ABB7-7715-4F19-84FD-55670BB6C820" colorSpace="pattern"/>
+                        <color key="tintColor" patternImage="2EEFEE15-8B15-4334-8DB7-234ACF45B544" colorSpace="pattern"/>
                         <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -379,7 +380,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="01E1ABB7-7715-4F19-84FD-55670BB6C820" width="640" height="920">
+        <image name="2EEFEE15-8B15-4334-8DB7-234ACF45B544" width="640" height="920">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
