@@ -57,6 +57,61 @@
             </objects>
             <point key="canvasLocation" x="1418" y="165"/>
         </scene>
+        <!--Repo Table View Controller-->
+        <scene sceneID="HG6-W9-eGm">
+            <objects>
+                <viewController id="DAi-ec-WSw" customClass="RepoTableViewController" customModule="GitHubClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="s25-dk-THq"/>
+                        <viewControllerLayoutGuide type="bottom" id="bgh-rE-lU2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zpf-io-M6K">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RGm-DX-HpJ">
+                                <rect key="frame" x="0.0" y="61" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aYr-lf-QjG">
+                                <rect key="frame" x="0.0" y="105" width="600" height="495"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="7dS-ee-rpO" rowHeight="60" style="IBUITableViewCellStyleDefault" id="Sf5-7A-fnM">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Sf5-7A-fnM" id="e5C-Dw-ahC">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7dS-ee-rpO">
+                                                    <rect key="frame" x="15" y="0.0" width="570" height="59.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="DAi-ec-WSw" id="l1z-N7-qQo"/>
+                                    <outlet property="delegate" destination="DAi-ec-WSw" id="MyK-dq-weN"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="RepoSearchBar" destination="RGm-DX-HpJ" id="X8Q-Mn-nSz"/>
+                        <outlet property="RepoSearchTableView" destination="aYr-lf-QjG" id="Fi6-k5-3Ng"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hRN-nP-ajC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2132" y="-621"/>
+        </scene>
         <!--User Search View Controller-->
         <scene sceneID="fS8-nZ-2pW">
             <objects>
@@ -69,7 +124,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fJc-ca-zdN">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fJc-ca-zdN">
                                 <rect key="frame" x="0.0" y="44" width="600" height="556"/>
                                 <color key="backgroundColor" red="0.32203380521136182" green="0.70887354765331256" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aZj-DJ-mq9">
@@ -80,7 +135,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UserSearchCollectionViewCell" id="m4y-T5-oDG" customClass="UserSearchCollectionViewCell" customModule="GitHubClone" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="64" width="212" height="212"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="212" height="212"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="212" height="212"/>
@@ -111,7 +166,7 @@
                                     <outlet property="delegate" destination="HCY-p0-8ht" id="tKB-Gs-bfk"/>
                                 </connections>
                             </collectionView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ZNt-hW-5tT">
+                            <searchBar contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZNt-hW-5tT">
                                 <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -139,66 +194,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FpZ-fR-o9C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2134" y="36"/>
-        </scene>
-        <!--Repo Table View Controller-->
-        <scene sceneID="sC5-dO-gef">
-            <objects>
-                <viewController id="0XU-XP-R3P" customClass="RepoTableViewController" customModule="GitHubClone" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ii3-zQ-Snj"/>
-                        <viewControllerLayoutGuide type="bottom" id="YNQ-gX-2Tl"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="SZ1-Xe-eMP">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="2Xf-nP-6qO">
-                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ozk-Ko-jYB">
-                                <rect key="frame" x="0.0" y="108" width="600" height="492"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="repoSegue" textLabel="PUL-Kt-jGu" style="IBUITableViewCellStyleDefault" id="0Yh-Uc-038">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Yh-Uc-038" id="Tyy-FN-OkL">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PUL-Kt-jGu">
-                                                    <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="ozk-Ko-jYB" firstAttribute="leading" secondItem="SZ1-Xe-eMP" secondAttribute="leading" id="8zf-wD-gMY"/>
-                            <constraint firstItem="ozk-Ko-jYB" firstAttribute="top" secondItem="2Xf-nP-6qO" secondAttribute="bottom" id="Jse-f1-eHp"/>
-                            <constraint firstAttribute="trailing" secondItem="ozk-Ko-jYB" secondAttribute="trailing" id="ZPR-Ki-1fr"/>
-                            <constraint firstAttribute="trailing" secondItem="2Xf-nP-6qO" secondAttribute="trailing" id="bSW-5K-fEk"/>
-                            <constraint firstItem="2Xf-nP-6qO" firstAttribute="leading" secondItem="SZ1-Xe-eMP" secondAttribute="leading" id="gvf-uX-ha0"/>
-                            <constraint firstItem="2Xf-nP-6qO" firstAttribute="top" secondItem="Ii3-zQ-Snj" secondAttribute="bottom" id="wSr-Bt-B1x"/>
-                            <constraint firstItem="YNQ-gX-2Tl" firstAttribute="top" secondItem="ozk-Ko-jYB" secondAttribute="bottom" id="ygp-6d-pb9"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="repoSearchBar" destination="2Xf-nP-6qO" id="PAk-2t-DB8"/>
-                        <outlet property="repoTableView" destination="ozk-Ko-jYB" id="ZRF-sJ-oJr"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KD1-b0-eFU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2134" y="-753"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="DrW-3U-SeK">
@@ -296,8 +291,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="MBb-CY-Jip" id="g9B-Nr-2kk"/>
-                        <segue destination="HCY-p0-8ht" kind="show" identifier="userSegue" id="4q6-Fb-rQv"/>
-                        <segue destination="0XU-XP-R3P" kind="show" identifier="repoSegue" id="edS-mw-RRX"/>
+                        <segue destination="DAi-ec-WSw" kind="show" identifier="repoSegue" id="fc6-rB-PL6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -371,7 +365,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleAspectFit" id="JwG-OP-pEU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" patternImage="6B181C25-5DA1-4854-BA4F-A97BDCBCC706" colorSpace="pattern"/>
+                        <color key="tintColor" patternImage="01E1ABB7-7715-4F19-84FD-55670BB6C820" colorSpace="pattern"/>
                         <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -385,7 +379,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="6B181C25-5DA1-4854-BA4F-A97BDCBCC706" width="640" height="920">
+        <image name="01E1ABB7-7715-4F19-84FD-55670BB6C820" width="640" height="920">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

@@ -33,14 +33,14 @@ class UserSearchViewController: UIViewController {
         super.viewWillDisappear(animated)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "UserSearchCollectionViewCell" {
-            var destination = segue.destinationViewController as? ProfileViewController, indexPath = collectionView.indexPathsForSelectedItems()!.first! as NSIndexPath {
-                let user = users[indexPath.row]
-                destination!.selectedUser = user
-            }
-        }
-    }
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if segue.identifier == "UserSearchCollectionViewCell" {
+//            var destination = segue.destinationViewController as? ProfileViewController, indexPath = collectionView.indexPathsForSelectedItems()!.first! as NSIndexPath {
+//                let user = users[indexPath.row]
+//                destination!.selectedUser = user
+//            }
+//        }
+//    }
 
     // MARK:   REGEX
     func searchBar(searchBar: UISearchBar, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {

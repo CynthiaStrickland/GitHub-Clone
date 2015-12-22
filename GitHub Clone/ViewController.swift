@@ -54,8 +54,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     }
     
-    // ...
-    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         if indexPath.row == 0 {
@@ -65,7 +63,5 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if indexPath.row == 1 {
             self.performSegueWithIdentifier("repoSegue", sender: nil)
         }
-        
     }
-    
 }

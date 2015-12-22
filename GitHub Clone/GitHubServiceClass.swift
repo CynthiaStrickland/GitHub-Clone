@@ -13,8 +13,7 @@ class GithubService {
     class func searchWithTerm(term: String, completion: (success: Bool, json: [String: AnyObject]) -> ()) {
         
         // This is the official URL, use it. This will work.
-        // https://api.github.com/search/repositories?q=term
-        
+        // https://api.github.com/search/repositories?q=term        
     }
     
     class func GETRepositories(completion: (success: Bool, json: [[String: AnyObject]]) -> ()) {

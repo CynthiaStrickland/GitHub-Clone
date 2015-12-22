@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D375A861C28CC8400FF331C /* RepoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D375A851C28CC8400FF331C /* RepoTableViewController.swift */; };
 		3D4EB7111BF622FB00953B98 /* UserSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4EB7101BF622FB00953B98 /* UserSearchViewController.swift */; };
 		3D4EB7131BF6241900953B98 /* UserSearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4EB7121BF6241900953B98 /* UserSearchCollectionViewCell.swift */; };
 		3D4EB7151BF625F900953B98 /* UserAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4EB7141BF625F900953B98 /* UserAvatar.swift */; };
@@ -55,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D375A851C28CC8400FF331C /* RepoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoTableViewController.swift; sourceTree = "<group>"; };
 		3D4EB7101BF622FB00953B98 /* UserSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchViewController.swift; sourceTree = "<group>"; };
 		3D4EB7121BF6241900953B98 /* UserSearchCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		3D4EB7141BF625F900953B98 /* UserAvatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAvatar.swift; sourceTree = "<group>"; };
@@ -120,8 +122,8 @@
 		3DE0970F1BF111BA0066BDDF = {
 			isa = PBXGroup;
 			children = (
-				3DE0974D1BF14E5C0066BDDF /* Security.framework */,
 				3DE0971A1BF111BA0066BDDF /* GitHub Clone */,
+				3DE0974D1BF14E5C0066BDDF /* Security.framework */,
 				3DE0972F1BF111BA0066BDDF /* GitHub CloneTests */,
 				3DE0973A1BF111BA0066BDDF /* GitHub CloneUITests */,
 				3DE097191BF111BA0066BDDF /* Products */,
@@ -148,14 +150,14 @@
 				3D4EB71A1BF6424900953B98 /* UISearchCollectionFlowLayoutVC.swift */,
 				3D4EB7121BF6241900953B98 /* UserSearchCollectionViewCell.swift */,
 				3D4EB7101BF622FB00953B98 /* UserSearchViewController.swift */,
+				3DE097591BF3F5F00066BDDF /* ViewController.swift */,
+				3D375A851C28CC8400FF331C /* RepoTableViewController.swift */,
 				3D4EB7141BF625F900953B98 /* UserAvatar.swift */,
 				3DE097551BF3DC2F0066BDDF /* ProfileViewController.swift */,
-				3DE097591BF3F5F00066BDDF /* ViewController.swift */,
-				3DE097571BF3ECEB0066BDDF /* GitHubServiceClass.swift */,
 				3DE097701BF562320066BDDF /* WebViewController.swift */,
-				3DE0974F1BF26F520066BDDF /* KeyChainService.swift */,
 				3DE097491BF1283A0066BDDF /* OAuthClient.swift */,
 				3DE097531BF29B120066BDDF /* LoginViewcontroller.swift */,
+				3DE097571BF3ECEB0066BDDF /* GitHubServiceClass.swift */,
 				3DE097631BF406850066BDDF /* MODELS */,
 				3DE097271BF111BA0066BDDF /* Info.plist */,
 				3DE097661BF52F810066BDDF /* warren.png */,
@@ -193,6 +195,7 @@
 				3DE0975D1BF403EC0066BDDF /* Repository.swift */,
 				3DE0975F1BF405FA0066BDDF /* User.swift */,
 				3DE097611BF4063D0066BDDF /* Owner.swift */,
+				3DE0974F1BF26F520066BDDF /* KeyChainService.swift */,
 			);
 			name = MODELS;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				3D4EB7131BF6241900953B98 /* UserSearchCollectionViewCell.swift in Sources */,
 				3D4EB71B1BF6424900953B98 /* UISearchCollectionFlowLayoutVC.swift in Sources */,
 				3DE097621BF4063D0066BDDF /* Owner.swift in Sources */,
+				3D375A861C28CC8400FF331C /* RepoTableViewController.swift in Sources */,
 				3DE097601BF405FA0066BDDF /* User.swift in Sources */,
 				3DE097711BF562320066BDDF /* WebViewController.swift in Sources */,
 				3DE0975E1BF403EC0066BDDF /* Repository.swift in Sources */,
